@@ -1,65 +1,79 @@
-function soma(n1, n2) {
-    alert(n1 + n2)
-}
-function subtracao(n1, n2) {
-    alert(n1 - n2)
-}
-function multiplicacao(n1, n2) {
-    alert(n1 * n2)
-}
-function divisao(n1, n2) {
-    alert(n1 / n2)
+function areadoretangulo() {
+    var base = parseFloat(document.getElementById("base").value);
+    var altura = parseFloat(document.getElementById("altura").value);
+    var area = base * altura
+    document.getElementById("resultado1").innerHTML = "A área do retangulo é: " + area.toFixed(2);
 }
 
-function mostrarnome() {
-    let nome = prompt("Qual é seu nome?")
-    alert("Olá, " + nome)
+function calcularAreaCirculo() {
+    var raio = parseFloat(document.getElementById("raioInput").value);
+    var area = Math.PI * Math.pow(raio, 2);
+    document.getElementById("resultado2").innerHTML = "A área do círculo é: " + area.toFixed(2);
 }
-function areadoretangulo() {
-    let base = prompt("Qual é a base")
-    let altura = prompt("Qual é a altura")
-    let area
-    area = base * altura
-    alert(area)
-}
-function areadocirculo() {
-    const pi = 3.14
-    let raio = prompt("Qual é o raio? ")
-    let area = pi * raio * raio
-    alert(area)
-}
-function areadotriangulo() {
-    const a = prompt("Qual é o co? ")
-    const b = prompt("Qual é a ca? ")
+
+function Hipotenusa() {
+    var a = parseFloat(document.getElementById("cateto1").value);
+    var b = parseFloat(document.getElementById("cateto2").value);
     const h2 = a * a * b * b
-    alert(h2)
+    document.getElementById("resultado3").innerHTML = "A área do triângulo é: " + h2.toFixed(2);
 }
 function dolar() {
-    const dolar = 4.93
-    let real = prompt("Insira um valor em reais?")
-    alert(dolar * real)
+    const dolar = 4.98
+    var real = parseFloat(document.getElementById("reais").value);
+    const conversao = dolar * real
+    document.getElementById("resultado4").innerHTML = "Conversão para dolar é: " + conversao.toFixed(2);
 }
 function temp() {
-    const C = prompt("Informe uma temperatura em Celsius")
-    const F = (C * 1.8) + 32
-    alert(F)
+    var C = parseFloat(document.getElementById("celsius").value);
+    var F = (C * 1.8) + 32
+    document.getElementById("resultado5").innerHTML = "A conversão da temperatura é: " + F.toFixed(2);
 }
 function mediarit() {
-    const nota1 = prompt("Qual a primeira nota")
-    const nota2 = prompt("Qual a segunda nota")
-    const nota3 = prompt("Qual a terceira nota")
+    var nota1 = parseFloat(document.getElementById("media1").value);
+    var nota2 = parseFloat(document.getElementById("media2").value);
+    var nota3 = parseFloat(document.getElementById("media3").value);
     const media = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3
-    alert(media)
+    document.getElementById("resultado6").innerHTML = "A média aritmetica é: " + media.toFixed(2);
 }
 function calcularRaizes() {
-    const a = parseFloat(prompt("Informe um valor para A:"))
-    const b = parseFloat(prompt("Informe um valor para B:"))
-    const c = parseFloat(prompt("Informe um valor para C:"))
+    var a = parseFloat(document.getElementById("valorA").value);
+    var b = parseFloat(document.getElementById("valorB").value);
+    var c = parseFloat(document.getElementById("valorC").value);
 
     const delta = (b * b) - 4 * a * c;
     const raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
     const raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
 
-    alert(raiz1)
-    alert(raiz2);
+    document.getElementById("resultado7").innerHTML = "A média aritmetica é: " + raiz1.toFixed(2);
+    document.getElementById("resultado8").innerHTML = "A média aritmetica é: " + raiz2.toFixed(2);
 }
+function converterVelocidade() {
+    var KmH = parseFloat(document.getElementById("converta").value);
+    const MpS = KmH * 1000 / 3600;
+
+    document.getElementById("resultado9").innerHTML = "Conversor de Km/h por m/s " + MpS.toFixed(2);
+}
+
+function calcularTriangulo() {
+
+    var ladoA = parseFloat(document.getElementById("ladoA").value);
+    var ladoB = parseFloat(document.getElementById("ladoB").value);
+    var ladoC = parseFloat(document.getElementById("ladoC").value);
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+        document.getElementById("resultado10").innerText = "Triângulo Equilátero";
+    } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+        document.getElementById("resultado10").innerText = "Triângulo Isósceles";
+    } else {
+        document.getElementById("resultado10").innerText = "Triângulo Escaleno";
+    }
+}
+
+function areadotriangulo() {
+    var base = parseFloat(document.getElementById("Base").value);
+    var altura = parseFloat(document.getElementById("Altura").value);
+    var area = (base * altura) / 2;
+
+    document.getElementById("resultado11").innerHTML = "A area do triangulo é : " + area.toFixed(2);
+}
+

@@ -10,21 +10,95 @@
 </head>
 
 <body>
-    <button onclick="soma(3, 2)">Soma</button>
-    <button onclick="subtracao(3, 2)">Subtração</button>
-    <button onclick="divisao(3, 2)">Divisão</button>
-    <button onclick="multiplicacao(3, 2)">Multiplicação</button>
-    <button onclick="mostrarnome()">Mostrar nome</button>
-    <button onclick="areadoretangulo()">Area do retangulo</button>
-    <p>
-    <p>Atividade em sala 17/05/2023.</p>
-    <button onclick="areadocirculo(3.14 )">Area do circulo</button>
-    <button onclick="areadotriangulo(3.14 )">Area do trinagulo</button>
-    <button onclick="dolar()">Conversão do dolar</button>
-    <button onclick="temp()">Conversão de temperatura</button>
-    <button onclick="mediarit()">Média Aritmética</button>
-    <button onclick="calcularRaizes()">Bhaskara</button>
-    </p>
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="raioInput" placeholder="Area do Circulo">
+        <button onclick="calcularAreaCirculo()">&nbsp;&nbsp;Calcular&nbsp;&nbsp;</button>
+    </div>
+    <div id="resultado2"></div>
+
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="reais" placeholder="Conversão de reais em dolar">
+        <button onclick="dolar()">Conversão</button>
+    </div>
+    <div id="resultado4"></div>
+
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="base" placeholder="Base do Retangulo">
+        <label for="raio"></label>
+        <input type="number" id="altura" placeholder="Area do Retangulo">
+        <button onclick="areadoretangulo()">Area do retangulo</button>
+    </div>
+    <div id="resultado1"></div>
+
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="cateto1" placeholder="Medida da base">
+        <label for="raio"></label>
+        <input type="number" id="cateto2" placeholder="Altura do Triangulo">
+        <button onclick="Hipotenusa()">&nbsp;Hipotenusa</button>
+    </div>
+    <div id="resultado3"></div>
+
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="celsius" placeholder="Conversão de C° em F°">
+        <button onclick="temp()">Conversão de temperatura</button>
+    </div>
+    <div id="resultado5"></div>
+
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="media1" placeholder="Nota 1">
+        <label for="raio"></label>
+        <input type="number" id="media2" placeholder="Nota 2">
+        <label for="raio"></label>
+        <input type="number" id="media3" placeholder="Nota 3">
+        <button onclick="mediarit()">Média Aritmética</button>
+    </div>
+    <div id="resultado6"></div>
+
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="valorA" placeholder="Valor de A">
+        <label for="raio"></label>
+        <input type="number" id="valorB" placeholder="Valor de B">
+        <label for="raio"></label>
+        <input type="number" id="valorC" placeholder="Valor de C">
+        <button onclick="calcularRaizes()">Bhaskara</button>
+        <div id="resultado7">
+            <div id="resultado8"></div>
+        </div>
+    </div>
+    <div>
+        <label for="raio"></label>
+        <input type="number" id="converta" placeholder="Converta Km/h em m/s">
+        <button onclick="converterVelocidade()">Conversão de velocidade</button>
+    </div>
+    <div id="resultado9"></div>
+
+    <div>
+        <label for="ladoA"></label>
+        <input type="number" id="ladoA" placeholder="lado A">
+        <label for="ladoB"></label>
+        <input type="number" id="ladoB" placeholder="lado B">
+        <label for="ladoC"></label>
+        <input type="number" id="ladoC" placeholder="lado C">
+        <button onclick="calcularTriangulo()">Area do triangulo</button>
+    </div>
+    <div id="resultado10"></div>
+
+    <div>
+        <label for="base"></label>
+        <input type="number" id="Base" placeholder="Base do triângulo">
+        <label for="altura"></label>
+        <input type="number" id="Altura" placeholder="Altura do triângulo">
+        <button onclick="areadotriangulo()">Área do triângulo</button>
+    </div>
+    <div id="resultado11"></div>
+
 </body>
 
 </html>
